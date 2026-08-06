@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduvia | Platform Beasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="#home"><span>E</span> Eduvia</a>
+
+  <nav id="nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#scholarships">Scholarships</a>
+    <a href="#categories">Categories</a>
+    <a href="#tips">Tips</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="btn outline" id="loginBtn">Masuk</button>
+    <button class="btn primary" id="registerBtn">Daftar</button>
+  </div>
+
+  <button class="hamburger" id="hamburger">☰</button>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <div class="badge">✓ Platform Beasiswa Terpercaya</div>
+      <h1>Temukan Beasiswa untuk <span>Masa Depanmu</span></h1>
+      <p>Temukan berbagai informasi beasiswa dalam dan luar negeri untuk mendukung pendidikan dan meraih cita-citamu.</p>
+
+      <form class="search" id="searchForm">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Cari beasiswa, universitas, atau kata kunci...">
+        <button class="btn primary">Cari Beasiswa</button>
+      </form>
+
+      <div class="stats">
+        <div><b>1000+</b><small>Beasiswa</small></div>
+        <div><b>50+</b><small>Negara</small></div>
+        <div><b>10K+</b><small>Pelajar Terbantu</small></div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="circle"></div>
+      <div class="globe">🌎</div>
+      <div class="student">👩🏻‍🎓</div>
+      <div class="books">📚</div>
+      <div class="cap">🎓</div>
+    </div>
+  </section>
+
+  <section class="section" id="scholarships">
+    <div class="section-head">
+      <div>
+        <label>PELUANG TERBAIK</label>
+        <h2>Beasiswa Populer</h2>
+        <p>Temukan peluang beasiswa yang banyak diminati pelajar.</p>
+      </div>
+      <button class="text-btn" id="allBtn">Lihat Semua →</button>
+    </div>
+    <div class="scholarship-grid" id="scholarshipGrid"></div>
+  </section>
+
+  <section class="section categories" id="categories">
+    <div class="section-head">
+      <div>
+        <label>JELAJAHI</label>
+        <h2>Kategori Beasiswa</h2>
+        <p>Pilih kategori yang sesuai dengan kebutuhanmu.</p>
+      </div>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </section>
+
+  <section class="section" id="tips">
+    <div class="section-head">
+      <div>
+        <label>PANDUAN EDUVIA</label>
+        <h2>Tips & Informasi</h2>
+        <p>Persiapkan dirimu agar peluang mendapatkan beasiswa semakin besar.</p>
+      </div>
+    </div>
+
+    <div class="tips-grid">
+      <article class="tip-card">
+        <div class="tip-icon blue">📋</div>
+        <div><h3>Cara Menulis Essay Beasiswa</h3><p>Tips menyusun essay yang jelas, personal, dan meyakinkan.</p><button class="read">Baca Selengkapnya →</button></div>
+      </article>
+      <article class="tip-card">
+        <div class="tip-icon green">🗓️</div>
+        <div><h3>Jadwal Beasiswa Bulan Ini</h3><p>Cek daftar beasiswa dengan deadline yang paling dekat.</p><button class="read">Baca Selengkapnya →</button></div>
+      </article>
+      <article class="tip-card">
+        <div class="tip-icon purple">💻</div>
+        <div><h3>Persiapan Interview Beasiswa</h3><p>Panduan agar lebih percaya diri saat menghadapi interview.</p><button class="read">Baca Selengkapnya →</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-icon">🎓</div>
+    <div><h2>Siap meraih masa depan yang lebih cerah?</h2><p>Daftar sekarang dan temukan beasiswa terbaik untukmu!</p></div>
+    <button class="btn white" id="ctaBtn">Daftar Sekarang →</button>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="about">
+      <a class="logo footer-logo" href="#home"><span>E</span> Eduvia</a>
+      <p>Platform pencarian beasiswa terpercaya untuk membantu pelajar meraih masa depan yang lebih baik.</p>
+      <div class="social"><button>◎</button><button>f</button><button>𝕏</button><button>▶</button></div>
+    </div>
+    <div>
+      <h3>Navigasi</h3>
+      <a href="#home">Home</a><a href="#scholarships">Scholarships</a><a href="#categories">Categories</a><a href="#tips">Tips</a>
+    </div>
+    <div>
+      <h3>Bantuan</h3>
+      <a href="#tips">Cara Melamar</a><a href="#tips">FAQ</a><a href="#contact">Kebijakan Privasi</a>
+    </div>
+    <div>
+      <h3>Kontak</h3>
+      <p>✉ info@eduvia.id</p><p>☎ +62 812-3456-7890</p><p>⌖ Jakarta, Indonesia</p>
+    </div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Eduvia. All rights reserved.</div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="close" id="close">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
